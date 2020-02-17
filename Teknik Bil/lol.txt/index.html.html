@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>broom</title>
+        <link rel="icon" type= "image/jpg"href='pepe.jpg'><!--sätter en fin bild och namn på sidans flik -->
+        <link rel="stylesheet" href="Style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script><!-- Förklarar vilka biblotek som behövs -->
+        <style>
+            body {
+                margin: 0;
+                overflow:hidden;
+            } 
+        </style>
+    </head>
+    <body>
+
+        <div id="page-wrapper">
+            <h1>Big vroom</h1>
+            <div id="status">Idle...</div>
+            <u1 id="messages"></u1>
+            <form>
+                <label for="inp" class="inp">
+                    <input type="number" id="1" placeholder="&nbsp;">
+                        <span class="label">Interval(ms)</span>
+                        <span class="border"></span>
+                </label>
+                
+                <label for="inp" class="inp">
+                        <input type="number" id="2" placeholder="&nbsp;">
+                        <span class="label">Intergation</span>
+                        <span class="border"></span>
+                </label>
+                <label for="inp" class="inp">
+                        <input type="number" id="3" placeholder="&nbsp;">
+                        <span class="label">Proption</span>
+                        <span class="border"></span>
+                </label>
+                <label for="inp" class="inp">
+                        <input type="number" id="4" placeholder="&nbsp;">
+                        <span class="label">Derivative</span>
+                        <span class="border"></span>
+                </label>
+                <label for="inp" class="inp">
+                        <input type="number" id="5" placeholder="&nbsp;">
+                        <span class="label">Update frequance</span>
+                        <span class="border"></span>
+                </label>
+                <label for="inp" class="inp">
+                        <input type="number" id="6" placeholder="&nbsp;">
+                        <span class="label">RPM</span>
+                        <span class="border"></span>
+                </label>
+                <label for="inp" class="inp">
+                    <input type="number" id="7" placeholder="&nbsp;">
+                    <span class="label">Distance</span>
+                    <span class="border"></span>
+                </label>
+                <!-- <label for="inp" class="inp">
+                    <input type="number" id="8" placeholder="&nbsp;">
+                    <span class="label">ProportionSaftey</span>
+                    <span class="border"></span>
+                </label> -->
+                <label for="inp" class="inp">
+                    <input type="text" id="9" placeholder="&nbsp;">
+                    <span class="label">Task</span>
+                    <span class="border"></span>
+                </label>
+                <!-- <label for="inp" class="inp">
+                    <input type="text" id="10" placeholder="&nbsp;">
+                    <span class="label">DataSetSize</span>
+                    <span class="border"></span>
+                </label> -->
+                <button type ="button" id ="Send">Send</button>
+                <button type ="button" id ="Save">Save</button>
+            </form>
+            <form id ="message-form" action="#" method="POST">
+                <textarea id = "message" placeholder="Message Display" required></textarea>
+                <button type ="button" id ="Robot">Connect Client</button>
+            </form>
+        </div>
+        <div id = "simon">
+          <h1>Simon</h1>
+          <form id ="message-form" action="#" method="POST">
+            <textarea id = "item" placeholder="Robot Message Display" required></textarea>
+          </form>
+          <div id="Charts">
+            <canvas id="SChart" height="10px" width="20px"></canvas>
+            </div>
+        </div>
+        <div id="oliver">
+          <h1>Oliver</h1>
+          <form id ="message-form" action="#" method="POST">
+            <textarea id = "item2" placeholder="Robot Message Display" required></textarea>
+          </form>
+          <div id="Charts">
+          <canvas id="OChart" height="10px" width="20px"></canvas>
+          </div></div>
+        
+        <script src="./node_modules/chart.js/dist/Chart.js"></script>
+        <script src = "printing.js"></script>
+    </body>
+</html>
